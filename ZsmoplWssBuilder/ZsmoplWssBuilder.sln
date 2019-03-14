@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28711.60
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.438
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestZsmopl", "TestZsmopl.csproj", "{798FE493-E9A1-4919-955C-7817DE1AF896}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZsmoplWssBuilder", "ZsmoplWssBuilder\ZsmoplWssBuilder\ZsmoplWssBuilder.csproj", "{2C26FD7B-0917-48EF-A736-6DEEB85D8B74}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZsmoplWssBuilder", "ZsmoplWssBuilder\ZsmoplWssBuilder.csproj", "{2C26FD7B-0917-48EF-A736-6DEEB85D8B74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{798FE493-E9A1-4919-955C-7817DE1AF896}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{798FE493-E9A1-4919-955C-7817DE1AF896}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{798FE493-E9A1-4919-955C-7817DE1AF896}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{798FE493-E9A1-4919-955C-7817DE1AF896}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2C26FD7B-0917-48EF-A736-6DEEB85D8B74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2C26FD7B-0917-48EF-A736-6DEEB85D8B74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C26FD7B-0917-48EF-A736-6DEEB85D8B74}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -26,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {822CA198-8CB3-441B-A02D-7787B5FC24F6}
+		SolutionGuid = {F83141BF-1342-4393-9223-0E7A7C3B1BA5}
 	EndGlobalSection
 EndGlobal
