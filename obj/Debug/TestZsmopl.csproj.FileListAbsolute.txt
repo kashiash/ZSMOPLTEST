@@ -15,3 +15,4 @@ C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\obj\Debug\TestZsmopl.csproj.
 C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\obj\Debug\TestZsmopl.exe
 C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\obj\Debug\TestZsmopl.pdb
 C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\obj\Debug\TestZsmopl.csprojAssemblyReference.cache
+C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\bin\Debug\ChilkatDotNet46.dll

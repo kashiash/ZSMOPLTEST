@@ -10,3 +10,5 @@ C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBu
 C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\obj\Debug\ZsmoplWssBuilder.csproj.CoreCompileInputs.cache
 C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\obj\Debug\ZsmoplWssBuilder.dll
 C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\obj\Debug\ZsmoplWssBuilder.pdb
+C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\bin\Debug\RGiesecke.DllExport.Metadata.dll
+C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\obj\Debug\ZsmoplWssBuilder.csproj.CopyComplete
