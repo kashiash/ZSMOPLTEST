@@ -1,0 +1,14 @@
+C:\Users\jkosinski\source\repos\kashiash\Gabos.Zsmolp.Client\bin\Debug\Gabos.Zsmolp.Client.dll
+C:\Users\jkosinski\source\repos\kashiash\Gabos.Zsmolp.Client\bin\Debug\Gabos.Zsmolp.Client.pdb
+C:\Users\jkosinski\source\repos\kashiash\Gabos.Zsmolp.Client\bin\Debug\ChilkatDotNet46.dll
+C:\Users\jkosinski\source\repos\kashiash\Gabos.Zsmolp.Client\obj\Debug\Gabos.Zsmolp.Client.csproj.CoreCompileInputs.cache
+C:\Users\jkosinski\source\repos\kashiash\Gabos.Zsmolp.Client\obj\Debug\Gabos.Zsmolp.Client.csproj.CopyComplete
+C:\Users\jkosinski\source\repos\kashiash\Gabos.Zsmolp.Client\obj\Debug\Gabos.Zsmolp.Client.dll
+C:\Users\jkosinski\source\repos\kashiash\Gabos.Zsmolp.Client\obj\Debug\Gabos.Zsmolp.Client.pdb
+C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\Gabos.Zsmolp.Client\bin\Debug\Gabos.Zsmolp.Client.dll
+C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\Gabos.Zsmolp.Client\bin\Debug\Gabos.Zsmolp.Client.pdb
+C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Debug\Gabos.Zsmolp.Client.csprojAssemblyReference.cache
+C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Debug\Gabos.Zsmolp.Client.csproj.CoreCompileInputs.cache
+C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Debug\Gabos.Zsmolp.Client.csproj.CopyComplete
+C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Debug\Gabos.Zsmolp.Client.dll
+C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Debug\Gabos.Zsmolp.Client.pdb

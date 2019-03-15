@@ -108,8 +108,8 @@
     },
     "Gabos.Zsmolp.Client/1.0.0": {
       "type": "project",
-      "path": "../../../Gabos.Zsmolp.Client/Gabos.Zsmolp.Client.csproj",
-      "msbuildProject": "../../../Gabos.Zsmolp.Client/Gabos.Zsmolp.Client.csproj"
+      "path": "../../Gabos.Zsmolp.Client/Gabos.Zsmolp.Client.csproj",
+      "msbuildProject": "../../Gabos.Zsmolp.Client/Gabos.Zsmolp.Client.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -125,11 +125,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\jkosinski\\source\\repos\\kashiash\\ZSMOPLTEST\\ZsmoplWssBuilder\\ZsmoplWssBuilder\\ZsmoplWssBuilder.csproj",
+      "projectUniqueName": "C:\\Users\\jkosinski\\source\\repos\\kashiash\\ZSMOPLTEST\\ZsmoplWssBuilder\\ZsmoplWssBuilder\\ZsmoplWssBuilder.csproj",
       "projectName": "ZsmoplWssBuilder",
-      "projectPath": "c:\\Users\\jkosinski\\source\\repos\\kashiash\\ZSMOPLTEST\\ZsmoplWssBuilder\\ZsmoplWssBuilder\\ZsmoplWssBuilder.csproj",
+      "projectPath": "C:\\Users\\jkosinski\\source\\repos\\kashiash\\ZSMOPLTEST\\ZsmoplWssBuilder\\ZsmoplWssBuilder\\ZsmoplWssBuilder.csproj",
       "packagesPath": "C:\\Users\\jkosinski\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\jkosinski\\source\\repos\\kashiash\\ZSMOPLTEST\\ZsmoplWssBuilder\\ZsmoplWssBuilder\\obj\\",
+      "outputPath": "C:\\Users\\jkosinski\\source\\repos\\kashiash\\ZSMOPLTEST\\ZsmoplWssBuilder\\ZsmoplWssBuilder\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -152,8 +152,8 @@
       "frameworks": {
         "net461": {
           "projectReferences": {
-            "C:\\Users\\jkosinski\\source\\repos\\kashiash\\Gabos.Zsmolp.Client\\Gabos.Zsmolp.Client.csproj": {
-              "projectPath": "C:\\Users\\jkosinski\\source\\repos\\kashiash\\Gabos.Zsmolp.Client\\Gabos.Zsmolp.Client.csproj"
+            "C:\\Users\\jkosinski\\source\\repos\\kashiash\\ZSMOPLTEST\\Gabos.Zsmolp.Client\\Gabos.Zsmolp.Client.csproj": {
+              "projectPath": "C:\\Users\\jkosinski\\source\\repos\\kashiash\\ZSMOPLTEST\\Gabos.Zsmolp.Client\\Gabos.Zsmolp.Client.csproj"
             }
           }
         }
