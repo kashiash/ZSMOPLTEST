@@ -1,0 +1,9 @@
+C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplTest\obj\Release\TestZsmopl.csproj.CoreCompileInputs.cache
+C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplTest\bin\Release\TestZsmopl.exe.config
+C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplTest\bin\Release\TestZsmopl.exe
+C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplTest\bin\Release\TestZsmopl.pdb
+C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplTest\bin\Release\ChilkatDotNet46.dll
+C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplTest\obj\Release\TestZsmopl.csprojAssemblyReference.cache
+C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplTest\obj\Release\TestZsmopl.csproj.CopyComplete
+C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplTest\obj\Release\TestZsmopl.exe
+C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplTest\obj\Release\TestZsmopl.pdb
