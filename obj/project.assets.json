@@ -1,80 +1,14 @@
 {
   "version": 3,
   "targets": {
-    ".NETFramework,Version=v4.6.1": {
-      "chilkat-win32/9.5.0.76": {
-        "type": "package",
-        "compile": {
-          "lib/net461/ChilkatDotNet46.dll": {}
-        },
-        "runtime": {
-          "lib/net461/ChilkatDotNet46.dll": {}
-        }
-      }
-    },
-    ".NETFramework,Version=v4.6.1/win": {
-      "chilkat-win32/9.5.0.76": {
-        "type": "package",
-        "compile": {
-          "lib/net461/ChilkatDotNet46.dll": {}
-        },
-        "runtime": {
-          "lib/net461/ChilkatDotNet46.dll": {}
-        }
-      }
-    },
-    ".NETFramework,Version=v4.6.1/win-x64": {
-      "chilkat-win32/9.5.0.76": {
-        "type": "package",
-        "compile": {
-          "lib/net461/ChilkatDotNet46.dll": {}
-        },
-        "runtime": {
-          "lib/net461/ChilkatDotNet46.dll": {}
-        }
-      }
-    },
-    ".NETFramework,Version=v4.6.1/win-x86": {
-      "chilkat-win32/9.5.0.76": {
-        "type": "package",
-        "compile": {
-          "lib/net461/ChilkatDotNet46.dll": {}
-        },
-        "runtime": {
-          "lib/net461/ChilkatDotNet46.dll": {}
-        }
-      }
-    }
+    ".NETFramework,Version=v4.6.1": {},
+    ".NETFramework,Version=v4.6.1/win": {},
+    ".NETFramework,Version=v4.6.1/win-x64": {},
+    ".NETFramework,Version=v4.6.1/win-x86": {}
   },
-  "libraries": {
-    "chilkat-win32/9.5.0.76": {
-      "sha512": "POZ/6Gxd88shWJLft7HnP2GzzIcvZmF44foYnC51dT5/2Mdwi3gQUUnt3rqJKekp5HtmJzERgGVHIotkUIpP6Q==",
-      "type": "package",
-      "path": "chilkat-win32/9.5.0.76",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "chilkat-win32.9.5.0.76.nupkg.sha512",
-        "chilkat-win32.nuspec",
-        "lib/net20/ChilkatDotNet2.dll",
-        "lib/net35/ChilkatDotNet2.dll",
-        "lib/net40/ChilkatDotNet4.dll",
-        "lib/net403/ChilkatDotNet4.dll",
-        "lib/net45/ChilkatDotNet45.dll",
-        "lib/net451/ChilkatDotNet45.dll",
-        "lib/net452/ChilkatDotNet45.dll",
-        "lib/net46/ChilkatDotNet46.dll",
-        "lib/net461/ChilkatDotNet46.dll",
-        "lib/net462/ChilkatDotNet46.dll",
-        "lib/net47/ChilkatDotNet47.dll",
-        "lib/net471/ChilkatDotNet47.dll"
-      ]
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    ".NETFramework,Version=v4.6.1": [
-      "chilkat-win32 >= 9.5.0.76"
-    ]
+    ".NETFramework,Version=v4.6.1": []
   },
   "packageFolders": {
     "C:\\Users\\jkosinski\\.nuget\\packages\\": {},
@@ -114,14 +48,7 @@
       }
     },
     "frameworks": {
-      "net461": {
-        "dependencies": {
-          "chilkat-win32": {
-            "target": "Package",
-            "version": "[9.5.0.76, )"
-          }
-        }
-      }
+      "net461": {}
     },
     "runtimes": {
       "win": {

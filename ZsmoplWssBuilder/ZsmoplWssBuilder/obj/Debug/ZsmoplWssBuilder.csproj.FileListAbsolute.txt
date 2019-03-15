@@ -6,7 +6,6 @@ C:\Users\slopuszanski\source\repos\ZsmoplWssBuilder\ZsmoplWssBuilder\obj\Debug\Z
 C:\Users\slopuszanski\source\repos\ZsmoplWssBuilder\ZsmoplWssBuilder\obj\Debug\ZsmoplWssBuilder.pdb
 C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\bin\Debug\ZsmoplWssBuilder.dll
 C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\bin\Debug\ZsmoplWssBuilder.pdb
-C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\obj\Debug\ZsmoplWssBuilder.csprojAssemblyReference.cache
 C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\obj\Debug\ZsmoplWssBuilder.csproj.CoreCompileInputs.cache
 C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\obj\Debug\ZsmoplWssBuilder.dll
 C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\obj\Debug\ZsmoplWssBuilder.pdb
