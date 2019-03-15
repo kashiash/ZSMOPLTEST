@@ -50,5 +50,11 @@
       <Version>1.2.7</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Gabos.Zsmolp.Client\Gabos.Zsmolp.Client.csproj">
+      <Project>{3f739210-b5bf-4014-8c95-c4d0a3fd4e59}</Project>
+      <Name>Gabos.Zsmolp.Client</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

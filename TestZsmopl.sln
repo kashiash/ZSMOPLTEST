@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestZsmopl", "TestZsmopl.cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZsmoplWssBuilder", "ZsmoplWssBuilder\ZsmoplWssBuilder\ZsmoplWssBuilder.csproj", "{2C26FD7B-0917-48EF-A736-6DEEB85D8B74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gabos.Zsmolp.Client", "..\Gabos.Zsmolp.Client\Gabos.Zsmolp.Client.csproj", "{3F739210-B5BF-4014-8C95-C4D0A3FD4E59}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2C26FD7B-0917-48EF-A736-6DEEB85D8B74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C26FD7B-0917-48EF-A736-6DEEB85D8B74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C26FD7B-0917-48EF-A736-6DEEB85D8B74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F739210-B5BF-4014-8C95-C4D0A3FD4E59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F739210-B5BF-4014-8C95-C4D0A3FD4E59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F739210-B5BF-4014-8C95-C4D0A3FD4E59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F739210-B5BF-4014-8C95-C4D0A3FD4E59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

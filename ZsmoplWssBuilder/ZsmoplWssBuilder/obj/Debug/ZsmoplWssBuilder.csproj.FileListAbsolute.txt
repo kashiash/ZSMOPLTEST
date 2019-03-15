@@ -11,3 +11,7 @@ C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBu
 C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\obj\Debug\ZsmoplWssBuilder.pdb
 C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\bin\Debug\RGiesecke.DllExport.Metadata.dll
 C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\obj\Debug\ZsmoplWssBuilder.csproj.CopyComplete
+c:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\bin\Debug\Gabos.Zsmolp.Client.dll
+c:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\bin\Debug\ChilkatDotNet46.dll
+c:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\bin\Debug\Gabos.Zsmolp.Client.pdb
+c:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\obj\Debug\ZsmoplWssBuilder.csprojAssemblyReference.cache

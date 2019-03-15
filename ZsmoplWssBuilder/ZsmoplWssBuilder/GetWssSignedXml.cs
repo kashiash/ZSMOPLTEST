@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using RGiesecke.DllExport;
 using System.Runtime.InteropServices;
+using Gabos.Zsmolp.Client;
 
 namespace ZsmoplWssBuilder
 {
@@ -15,7 +16,7 @@ namespace ZsmoplWssBuilder
         public static string GetWssSignedXml([MarshalAs(UnmanagedType.BStr)] string certificate,
             [MarshalAs(UnmanagedType.BStr)] string certPassword, [MarshalAs(UnmanagedType.BStr)] string bodyXml)
         {
-            return "";
+            return ZsmoplFactory.GetSignedRequest(certificate, certPassword, bodyXml);
         }
     }
 }

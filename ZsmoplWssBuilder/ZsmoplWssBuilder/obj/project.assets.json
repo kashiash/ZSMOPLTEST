@@ -10,6 +10,15 @@
         "runtime": {
           "lib/net/RGiesecke.DllExport.Metadata.dll": {}
         }
+      },
+      "Gabos.Zsmolp.Client/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Gabos.Zsmolp.Client.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Gabos.Zsmolp.Client.dll": {}
+        }
       }
     },
     ".NETFramework,Version=v4.6.1/win": {
@@ -20,6 +29,15 @@
         },
         "runtime": {
           "lib/net/RGiesecke.DllExport.Metadata.dll": {}
+        }
+      },
+      "Gabos.Zsmolp.Client/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Gabos.Zsmolp.Client.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Gabos.Zsmolp.Client.dll": {}
         }
       }
     },
@@ -32,6 +50,15 @@
         "runtime": {
           "lib/net/RGiesecke.DllExport.Metadata.dll": {}
         }
+      },
+      "Gabos.Zsmolp.Client/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Gabos.Zsmolp.Client.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Gabos.Zsmolp.Client.dll": {}
+        }
       }
     },
     ".NETFramework,Version=v4.6.1/win-x86": {
@@ -42,6 +69,15 @@
         },
         "runtime": {
           "lib/net/RGiesecke.DllExport.Metadata.dll": {}
+        }
+      },
+      "Gabos.Zsmolp.Client/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Gabos.Zsmolp.Client.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Gabos.Zsmolp.Client.dll": {}
         }
       }
     }
@@ -69,10 +105,16 @@
         "unmanagedexports.1.2.7.nupkg.sha512",
         "unmanagedexports.nuspec"
       ]
+    },
+    "Gabos.Zsmolp.Client/1.0.0": {
+      "type": "project",
+      "path": "../../../Gabos.Zsmolp.Client/Gabos.Zsmolp.Client.csproj",
+      "msbuildProject": "../../../Gabos.Zsmolp.Client/Gabos.Zsmolp.Client.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.6.1": [
+      "Gabos.Zsmolp.Client >= 1.0.0",
       "UnmanagedExports >= 1.2.7"
     ]
   },
@@ -83,11 +125,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jkosinski\\source\\repos\\kashiash\\ZSMOPLTEST\\ZsmoplWssBuilder\\ZsmoplWssBuilder\\ZsmoplWssBuilder.csproj",
+      "projectUniqueName": "c:\\Users\\jkosinski\\source\\repos\\kashiash\\ZSMOPLTEST\\ZsmoplWssBuilder\\ZsmoplWssBuilder\\ZsmoplWssBuilder.csproj",
       "projectName": "ZsmoplWssBuilder",
-      "projectPath": "C:\\Users\\jkosinski\\source\\repos\\kashiash\\ZSMOPLTEST\\ZsmoplWssBuilder\\ZsmoplWssBuilder\\ZsmoplWssBuilder.csproj",
+      "projectPath": "c:\\Users\\jkosinski\\source\\repos\\kashiash\\ZSMOPLTEST\\ZsmoplWssBuilder\\ZsmoplWssBuilder\\ZsmoplWssBuilder.csproj",
       "packagesPath": "C:\\Users\\jkosinski\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jkosinski\\source\\repos\\kashiash\\ZSMOPLTEST\\ZsmoplWssBuilder\\ZsmoplWssBuilder\\obj\\",
+      "outputPath": "c:\\Users\\jkosinski\\source\\repos\\kashiash\\ZSMOPLTEST\\ZsmoplWssBuilder\\ZsmoplWssBuilder\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -109,7 +151,11 @@
       },
       "frameworks": {
         "net461": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\jkosinski\\source\\repos\\kashiash\\Gabos.Zsmolp.Client\\Gabos.Zsmolp.Client.csproj": {
+              "projectPath": "C:\\Users\\jkosinski\\source\\repos\\kashiash\\Gabos.Zsmolp.Client\\Gabos.Zsmolp.Client.csproj"
+            }
+          }
         }
       }
     },

@@ -83,7 +83,7 @@ namespace TestZsmopl
 
         private static string LoadMediqusXml()
         {
-            string rec = File.ReadAllText(@"c:\Apps\bodybo796905559833.xml");
+            string rec = File.ReadAllText(@"c:\Apps\ww5065981.xml");
             return rec;
         }
 
@@ -347,7 +347,7 @@ namespace TestZsmopl
             req.ContentType = "text/xml";
             req.SendCharset = true;
             req.Charset = "utf-8";
-            req.AddHeader("SOAPAction", $"\"urn:zapiszKomunikatOS\"");
+            req.AddHeader("SOAPAction", $"\"zapiszKomunikatOS\"");
             req.Path = "/cxf/zsmopl/ws";
 
 
