@@ -19,5 +19,14 @@ namespace Gabos.Zsmopl.Clarion
             var res = ZsmoplFactory.GetSignedRequest(certificate, certPassword, bodyXml);
             return res;
         }
+
+        [DllExport(nameof(GetWssSignedXml), CallingConvention = CallingConvention.StdCall)]
+        [return: MarshalAs(UnmanagedType.BStr)]
+        public static string GetWssSignedXmlFake([MarshalAs(UnmanagedType.BStr)] string certificate,
+    [MarshalAs(UnmanagedType.BStr)] string certPassword, [MarshalAs(UnmanagedType.BStr)] string bodyXml)
+        {
+            var res = ZsmoplFactory.GetSignedRequest(certificate, certPassword, bodyXml);
+            return res;
+        }
     }
 }
