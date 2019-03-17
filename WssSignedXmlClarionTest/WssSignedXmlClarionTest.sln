@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+# Clarion 2.1.0.2447
+Project("{12B76EC0-1D7B-4FA7-A7D0-C524288B48A1}") = "WssSignedXmlClarionTest", "WssSignedXmlClarionTest.cwproj", "{B6E8BD2E-ED4A-453F-B13D-02588A456480}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{{2150E333-8FDC-42A3-9474-1A3956D46DE8}}"
+	ProjectSection(SolutionItems) = postProject
+		WssSignedXmlClarionTest.app = WssSignedXmlClarionTest.app
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6E8BD2E-ED4A-453F-B13D-02588A456480}.Debug|Win32.Build.0 = Debug|Win32
+		{B6E8BD2E-ED4A-453F-B13D-02588A456480}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B6E8BD2E-ED4A-453F-B13D-02588A456480}.Release|Win32.Build.0 = Release|Win32
+		{B6E8BD2E-ED4A-453F-B13D-02588A456480}.Release|Win32.ActiveCfg = Release|Win32
+	EndGlobalSection
+EndGlobal
