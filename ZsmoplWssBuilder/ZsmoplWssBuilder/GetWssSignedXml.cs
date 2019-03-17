@@ -4,7 +4,6 @@ using System.Runtime.InteropServices;
 
 namespace ZsmoplWssBuilder
 {
-    
     public static class WssSignedXml
     {
         [DllExport(nameof(GetWssSignedXmlX), CallingConvention = CallingConvention.StdCall)]
