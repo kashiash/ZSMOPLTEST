@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Gabos.Zsmolp.Client
 {
@@ -50,7 +47,7 @@ namespace Gabos.Zsmolp.Client
             gen.KeyInfoId = "KI-9D95C38916099AD2EE87DDAC1A76E97E4";
 
             // -------- Reference 1 --------
-            gen.AddSameDocRef("id-396BB6026342EB5C0E1EA73593B3CC098", "sha1", "EXCL_C14N", "obs", "");
+            gen.AddSameDocRef("id-396BB6026342EB5C0E1EA73593B3CC098", "sha1", "EXCL_C14N", "obs", string.Empty);
 
             // The reference to be produced in the Signature should look like this:
 
@@ -110,7 +107,7 @@ namespace Gabos.Zsmolp.Client
             // -----------------------------------------------
 
             // Save the signed XML to a file.
-          //  success = sbXml.WriteFile(@"c:\apps\SignedRequest.xml", "utf-8", false);
+            //  success = sbXml.WriteFile(@"c:\apps\SignedRequest.xml", "utf-8", false);
 
             Debug.WriteLine(sbXml.GetAsString());
 

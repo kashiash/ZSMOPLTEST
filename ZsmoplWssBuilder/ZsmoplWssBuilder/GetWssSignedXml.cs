@@ -16,7 +16,8 @@ namespace ZsmoplWssBuilder
         public static string GetWssSignedXml([MarshalAs(UnmanagedType.BStr)] string certificate,
             [MarshalAs(UnmanagedType.BStr)] string certPassword, [MarshalAs(UnmanagedType.BStr)] string bodyXml)
         {
-            return ZsmoplFactory.GetSignedRequest(certificate, certPassword, bodyXml);
+            var res =  ZsmoplFactory.GetSignedRequest(certificate, certPassword, bodyXml);
+            return res;
         }
     }
 }

@@ -12,3 +12,10 @@ C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Debu
 C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Debug\Gabos.Zsmolp.Client.csproj.CopyComplete
 C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Debug\Gabos.Zsmolp.Client.dll
 C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Debug\Gabos.Zsmolp.Client.pdb
+C:\Users\User\Source\Repos\kashiash\ZSMOPLTEST\Gabos.Zsmolp.Client\bin\Debug\Gabos.Zsmolp.Client.dll
+C:\Users\User\Source\Repos\kashiash\ZSMOPLTEST\Gabos.Zsmolp.Client\bin\Debug\Gabos.Zsmolp.Client.pdb
+C:\Users\User\Source\Repos\kashiash\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Debug\Gabos.Zsmolp.Client.csprojAssemblyReference.cache
+C:\Users\User\Source\Repos\kashiash\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Debug\Gabos.Zsmolp.Client.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\kashiash\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Debug\Gabos.Zsmolp.Client.csproj.CopyComplete
+C:\Users\User\Source\Repos\kashiash\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Debug\Gabos.Zsmolp.Client.dll
+C:\Users\User\Source\Repos\kashiash\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Debug\Gabos.Zsmolp.Client.pdb
