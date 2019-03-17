@@ -15,3 +15,13 @@ c:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBu
 c:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\bin\Debug\ChilkatDotNet46.dll
 c:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\bin\Debug\Gabos.Zsmolp.Client.pdb
 c:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\obj\Debug\ZsmoplWssBuilder.csprojAssemblyReference.cache
+C:\apps\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\obj\Debug\ZsmoplWssBuilder.csprojAssemblyReference.cache
+C:\apps\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\obj\Debug\ZsmoplWssBuilder.csproj.CoreCompileInputs.cache
+C:\apps\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\obj\Debug\ZsmoplWssBuilder.dll
+C:\apps\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\obj\Debug\ZsmoplWssBuilder.pdb
+C:\apps\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\bin\Debug\ZsmoplWssBuilder.dll
+C:\apps\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\bin\Debug\ZsmoplWssBuilder.pdb
+C:\apps\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\bin\Debug\Gabos.Zsmolp.Client.dll
+C:\apps\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\bin\Debug\ChilkatDotNet46.dll
+C:\apps\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\bin\Debug\Gabos.Zsmolp.Client.pdb
+C:\apps\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\obj\Debug\ZsmoplWssBuilder.csproj.CopyComplete
