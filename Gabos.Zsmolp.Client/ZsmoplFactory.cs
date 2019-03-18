@@ -11,9 +11,19 @@ namespace Gabos.Zsmolp.Client
     {
         public static string GetSignedRequest(string certificate, string password, string body)
         {
+            UnlockChilkat();
             return SignXml(certificate, password, body);
         }
-
+        private static void UnlockChilkat()
+        {
+            Chilkat.Global glob = new Chilkat.Global();
+            var success = glob.UnlockBundle("GABOSP.CBX112020_9fFCSJMMnRBy");
+            if (success != true)
+            {
+                Debug.WriteLine(glob.LastErrorText);
+                return;
+            }
+        }
         public static string SignXml(string certWss, string passWss, string body)
         {
             bool success = true;

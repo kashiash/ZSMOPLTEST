@@ -24,3 +24,11 @@ C:\apps\ZSMOPLTEST\ZsmoplTest\obj\Debug\TestZsmopl.csproj.CoreCompileInputs.cach
 C:\apps\ZSMOPLTEST\ZsmoplTest\obj\Debug\TestZsmopl.csproj.CopyComplete
 C:\apps\ZSMOPLTEST\ZsmoplTest\obj\Debug\TestZsmopl.exe
 C:\apps\ZSMOPLTEST\ZsmoplTest\obj\Debug\TestZsmopl.pdb
+C:\Users\jkosinski\Source\Repos\kashiash\ZSMOPLTEST\ZsmoplTest\bin\Debug\TestZsmopl.exe.config
+C:\Users\jkosinski\Source\Repos\kashiash\ZSMOPLTEST\ZsmoplTest\bin\Debug\TestZsmopl.exe
+C:\Users\jkosinski\Source\Repos\kashiash\ZSMOPLTEST\ZsmoplTest\bin\Debug\TestZsmopl.pdb
+C:\Users\jkosinski\Source\Repos\kashiash\ZSMOPLTEST\ZsmoplTest\bin\Debug\ChilkatDotNet46.dll
+C:\Users\jkosinski\Source\Repos\kashiash\ZSMOPLTEST\ZsmoplTest\obj\Debug\TestZsmopl.csproj.CoreCompileInputs.cache
+C:\Users\jkosinski\Source\Repos\kashiash\ZSMOPLTEST\ZsmoplTest\obj\Debug\TestZsmopl.csproj.CopyComplete
+C:\Users\jkosinski\Source\Repos\kashiash\ZSMOPLTEST\ZsmoplTest\obj\Debug\TestZsmopl.exe
+C:\Users\jkosinski\Source\Repos\kashiash\ZSMOPLTEST\ZsmoplTest\obj\Debug\TestZsmopl.pdb

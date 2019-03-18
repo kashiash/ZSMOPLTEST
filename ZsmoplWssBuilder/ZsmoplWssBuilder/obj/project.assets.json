@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.6.1": {
+      "UnmanagedExports/1.2.7": {
+        "type": "package",
+        "compile": {
+          "lib/net/RGiesecke.DllExport.Metadata.dll": {}
+        },
+        "runtime": {
+          "lib/net/RGiesecke.DllExport.Metadata.dll": {}
+        }
+      },
       "Gabos.Zsmolp.Client/1.0.0": {
         "type": "project",
         "compile": {
@@ -13,6 +22,15 @@
       }
     },
     ".NETFramework,Version=v4.6.1/win": {
+      "UnmanagedExports/1.2.7": {
+        "type": "package",
+        "compile": {
+          "lib/net/RGiesecke.DllExport.Metadata.dll": {}
+        },
+        "runtime": {
+          "lib/net/RGiesecke.DllExport.Metadata.dll": {}
+        }
+      },
       "Gabos.Zsmolp.Client/1.0.0": {
         "type": "project",
         "compile": {
@@ -24,6 +42,15 @@
       }
     },
     ".NETFramework,Version=v4.6.1/win-x64": {
+      "UnmanagedExports/1.2.7": {
+        "type": "package",
+        "compile": {
+          "lib/net/RGiesecke.DllExport.Metadata.dll": {}
+        },
+        "runtime": {
+          "lib/net/RGiesecke.DllExport.Metadata.dll": {}
+        }
+      },
       "Gabos.Zsmolp.Client/1.0.0": {
         "type": "project",
         "compile": {
@@ -35,6 +62,15 @@
       }
     },
     ".NETFramework,Version=v4.6.1/win-x86": {
+      "UnmanagedExports/1.2.7": {
+        "type": "package",
+        "compile": {
+          "lib/net/RGiesecke.DllExport.Metadata.dll": {}
+        },
+        "runtime": {
+          "lib/net/RGiesecke.DllExport.Metadata.dll": {}
+        }
+      },
       "Gabos.Zsmolp.Client/1.0.0": {
         "type": "project",
         "compile": {
@@ -47,6 +83,29 @@
     }
   },
   "libraries": {
+    "UnmanagedExports/1.2.7": {
+      "sha512": "bPIbzFaAj4AFxjHGFGPrYnUSCyIWJMkT/LFuiphWdpUbO2L9fP68W/1SP9cHCAxgiekV+kFNbybA2VvRo8PYIQ==",
+      "type": "package",
+      "path": "unmanagedexports/1.2.7",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net/RGiesecke.DllExport.Metadata.dll",
+        "tools/DllExportCmdLets.psm1",
+        "tools/Mono.Cecil.dll",
+        "tools/RGiesecke.DllExport.MSBuild.dll",
+        "tools/RGiesecke.DllExport.MSBuild.pdb",
+        "tools/RGiesecke.DllExport.dll",
+        "tools/RGiesecke.DllExport.pdb",
+        "tools/RGiesecke.DllExport.targets",
+        "tools/init.ps1",
+        "tools/install.ps1",
+        "tools/uninstall.ps1",
+        "unmanagedexports.1.2.7.nupkg.sha512",
+        "unmanagedexports.nuspec"
+      ]
+    },
     "Gabos.Zsmolp.Client/1.0.0": {
       "type": "project",
       "path": "../../Gabos.Zsmolp.Client/Gabos.Zsmolp.Client.csproj",
@@ -55,26 +114,32 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.6.1": [
-      "Gabos.Zsmolp.Client >= 1.0.0"
+      "Gabos.Zsmolp.Client >= 1.0.0",
+      "UnmanagedExports >= 1.2.7"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\slopuszanski\\.nuget\\packages\\": {}
+    "C:\\Users\\jkosinski\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\apps\\ZSMOPLTEST\\ZsmoplWssBuilder\\ZsmoplWssBuilder\\ZsmoplWssBuilder.csproj",
+      "projectUniqueName": "C:\\Users\\jkosinski\\Source\\Repos\\kashiash\\ZSMOPLTEST\\ZsmoplWssBuilder\\ZsmoplWssBuilder\\ZsmoplWssBuilder.csproj",
       "projectName": "ZsmoplWssBuilder",
-      "projectPath": "C:\\apps\\ZSMOPLTEST\\ZsmoplWssBuilder\\ZsmoplWssBuilder\\ZsmoplWssBuilder.csproj",
-      "packagesPath": "C:\\Users\\slopuszanski\\.nuget\\packages\\",
-      "outputPath": "C:\\apps\\ZSMOPLTEST\\ZsmoplWssBuilder\\ZsmoplWssBuilder\\obj\\",
+      "projectPath": "C:\\Users\\jkosinski\\Source\\Repos\\kashiash\\ZSMOPLTEST\\ZsmoplWssBuilder\\ZsmoplWssBuilder\\ZsmoplWssBuilder.csproj",
+      "packagesPath": "C:\\Users\\jkosinski\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jkosinski\\Source\\Repos\\kashiash\\ZSMOPLTEST\\ZsmoplWssBuilder\\ZsmoplWssBuilder\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\slopuszanski\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jkosinski\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.2.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net461"
@@ -87,15 +152,22 @@
       "frameworks": {
         "net461": {
           "projectReferences": {
-            "C:\\apps\\ZSMOPLTEST\\Gabos.Zsmolp.Client\\Gabos.Zsmolp.Client.csproj": {
-              "projectPath": "C:\\apps\\ZSMOPLTEST\\Gabos.Zsmolp.Client\\Gabos.Zsmolp.Client.csproj"
+            "C:\\Users\\jkosinski\\Source\\Repos\\kashiash\\ZSMOPLTEST\\Gabos.Zsmolp.Client\\Gabos.Zsmolp.Client.csproj": {
+              "projectPath": "C:\\Users\\jkosinski\\Source\\Repos\\kashiash\\ZSMOPLTEST\\Gabos.Zsmolp.Client\\Gabos.Zsmolp.Client.csproj"
             }
           }
         }
       }
     },
     "frameworks": {
-      "net461": {}
+      "net461": {
+        "dependencies": {
+          "UnmanagedExports": {
+            "target": "Package",
+            "version": "[1.2.7, )"
+          }
+        }
+      }
     },
     "runtimes": {
       "win": {
