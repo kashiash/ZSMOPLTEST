@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Gabos.Zsmolp.Client
 {
@@ -8,7 +11,18 @@ namespace Gabos.Zsmolp.Client
     {
         public static string GetSignedRequest(string certificate, string password, string body)
         {
+            UnlockChilkat();
             return SignXml(certificate, password, body);
+        }
+        private static void UnlockChilkat()
+        {
+            Chilkat.Global glob = new Chilkat.Global();
+            var success = glob.UnlockBundle("GABOSP.CBX112020_9fFCSJMMnRBy");
+            if (success != true)
+            {
+                Debug.WriteLine(glob.LastErrorText);
+                return;
+            }
         }
 
         public static string SignXml(string certWss, string passWss, string body)
@@ -47,7 +61,7 @@ namespace Gabos.Zsmolp.Client
             gen.KeyInfoId = "KI-9D95C38916099AD2EE87DDAC1A76E97E4";
 
             // -------- Reference 1 --------
-            gen.AddSameDocRef("id-396BB6026342EB5C0E1EA73593B3CC098", "sha1", "EXCL_C14N", "obs", string.Empty);
+            gen.AddSameDocRef("id-396BB6026342EB5C0E1EA73593B3CC098", "sha1", "EXCL_C14N", "obs", "");
 
             // The reference to be produced in the Signature should look like this:
 
@@ -64,10 +78,8 @@ namespace Gabos.Zsmolp.Client
             Chilkat.Cert cert = new Chilkat.Cert();
             success = cert.LoadPfxFile(certWss, passWss);
             if (success != true)
-            {
                 Debug.WriteLine(cert.LastErrorText);
                 //  return;
-            }
 
             gen.SetX509Cert(cert, true);
 
@@ -99,10 +111,8 @@ namespace Gabos.Zsmolp.Client
             // Sign the XML...
             success = gen.CreateXmlDSigSb(sbXml);
             if (success != true)
-            {
                 Debug.WriteLine(gen.LastErrorText);
                 // return;
-            }
 
             // -----------------------------------------------
 

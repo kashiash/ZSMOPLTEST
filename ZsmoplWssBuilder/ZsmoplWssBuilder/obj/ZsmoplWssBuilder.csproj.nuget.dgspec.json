@@ -1,28 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jkosinski\\source\\repos\\kashiash\\ZSMOPLTEST\\ZsmoplWssBuilder\\ZsmoplWssBuilder\\ZsmoplWssBuilder.csproj": {}
+    "C:\\Users\\jkosinski\\Source\\Repos\\kashiash\\ZSMOPLTEST\\ZsmoplWssBuilder\\ZsmoplWssBuilder\\ZsmoplWssBuilder.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jkosinski\\source\\repos\\kashiash\\ZSMOPLTEST\\Gabos.Zsmolp.Client\\Gabos.Zsmolp.Client.csproj": {
+    "C:\\Users\\jkosinski\\Source\\Repos\\kashiash\\ZSMOPLTEST\\Gabos.Zsmolp.Client\\Gabos.Zsmolp.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jkosinski\\source\\repos\\kashiash\\ZSMOPLTEST\\Gabos.Zsmolp.Client\\Gabos.Zsmolp.Client.csproj",
+        "projectUniqueName": "C:\\Users\\jkosinski\\Source\\Repos\\kashiash\\ZSMOPLTEST\\Gabos.Zsmolp.Client\\Gabos.Zsmolp.Client.csproj",
         "projectName": "Gabos.Zsmolp.Client",
-        "projectPath": "C:\\Users\\jkosinski\\source\\repos\\kashiash\\ZSMOPLTEST\\Gabos.Zsmolp.Client\\Gabos.Zsmolp.Client.csproj"
+        "projectPath": "C:\\Users\\jkosinski\\Source\\Repos\\kashiash\\ZSMOPLTEST\\Gabos.Zsmolp.Client\\Gabos.Zsmolp.Client.csproj"
       },
       "frameworks": {
         "net461": {}
       }
     },
-    "C:\\Users\\jkosinski\\source\\repos\\kashiash\\ZSMOPLTEST\\ZsmoplWssBuilder\\ZsmoplWssBuilder\\ZsmoplWssBuilder.csproj": {
+    "C:\\Users\\jkosinski\\Source\\Repos\\kashiash\\ZSMOPLTEST\\ZsmoplWssBuilder\\ZsmoplWssBuilder\\ZsmoplWssBuilder.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jkosinski\\source\\repos\\kashiash\\ZSMOPLTEST\\ZsmoplWssBuilder\\ZsmoplWssBuilder\\ZsmoplWssBuilder.csproj",
+        "projectUniqueName": "C:\\Users\\jkosinski\\Source\\Repos\\kashiash\\ZSMOPLTEST\\ZsmoplWssBuilder\\ZsmoplWssBuilder\\ZsmoplWssBuilder.csproj",
         "projectName": "ZsmoplWssBuilder",
-        "projectPath": "C:\\Users\\jkosinski\\source\\repos\\kashiash\\ZSMOPLTEST\\ZsmoplWssBuilder\\ZsmoplWssBuilder\\ZsmoplWssBuilder.csproj",
+        "projectPath": "C:\\Users\\jkosinski\\Source\\Repos\\kashiash\\ZSMOPLTEST\\ZsmoplWssBuilder\\ZsmoplWssBuilder\\ZsmoplWssBuilder.csproj",
         "packagesPath": "C:\\Users\\jkosinski\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jkosinski\\source\\repos\\kashiash\\ZSMOPLTEST\\ZsmoplWssBuilder\\ZsmoplWssBuilder\\obj\\",
+        "outputPath": "C:\\Users\\jkosinski\\Source\\Repos\\kashiash\\ZSMOPLTEST\\ZsmoplWssBuilder\\ZsmoplWssBuilder\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -45,8 +45,8 @@
         "frameworks": {
           "net461": {
             "projectReferences": {
-              "C:\\Users\\jkosinski\\source\\repos\\kashiash\\ZSMOPLTEST\\Gabos.Zsmolp.Client\\Gabos.Zsmolp.Client.csproj": {
-                "projectPath": "C:\\Users\\jkosinski\\source\\repos\\kashiash\\ZSMOPLTEST\\Gabos.Zsmolp.Client\\Gabos.Zsmolp.Client.csproj"
+              "C:\\Users\\jkosinski\\Source\\Repos\\kashiash\\ZSMOPLTEST\\Gabos.Zsmolp.Client\\Gabos.Zsmolp.Client.csproj": {
+                "projectPath": "C:\\Users\\jkosinski\\Source\\Repos\\kashiash\\ZSMOPLTEST\\Gabos.Zsmolp.Client\\Gabos.Zsmolp.Client.csproj"
               }
             }
           }

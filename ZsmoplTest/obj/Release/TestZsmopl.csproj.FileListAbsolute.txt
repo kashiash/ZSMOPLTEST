@@ -7,3 +7,12 @@ C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplTest\obj\Release\TestZ
 C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplTest\obj\Release\TestZsmopl.csproj.CopyComplete
 C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplTest\obj\Release\TestZsmopl.exe
 C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplTest\obj\Release\TestZsmopl.pdb
+C:\apps\ZSMOPLTEST\ZsmoplTest\bin\Release\TestZsmopl.exe.config
+C:\apps\ZSMOPLTEST\ZsmoplTest\bin\Release\TestZsmopl.exe
+C:\apps\ZSMOPLTEST\ZsmoplTest\bin\Release\TestZsmopl.pdb
+C:\apps\ZSMOPLTEST\ZsmoplTest\obj\Release\TestZsmopl.csprojAssemblyReference.cache
+C:\apps\ZSMOPLTEST\ZsmoplTest\obj\Release\TestZsmopl.csproj.CoreCompileInputs.cache
+C:\apps\ZSMOPLTEST\ZsmoplTest\obj\Release\TestZsmopl.csproj.CopyComplete
+C:\apps\ZSMOPLTEST\ZsmoplTest\obj\Release\TestZsmopl.exe
+C:\apps\ZSMOPLTEST\ZsmoplTest\obj\Release\TestZsmopl.pdb
+C:\apps\ZSMOPLTEST\ZsmoplTest\bin\Release\ChilkatDotNet46.dll

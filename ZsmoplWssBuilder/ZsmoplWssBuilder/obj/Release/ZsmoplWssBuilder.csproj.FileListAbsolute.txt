@@ -9,3 +9,14 @@ C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBu
 C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\obj\Release\ZsmoplWssBuilder.csproj.CopyComplete
 C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\obj\Release\ZsmoplWssBuilder.dll
 C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\obj\Release\ZsmoplWssBuilder.pdb
+C:\apps\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\bin\Release\ZsmoplWssBuilder.dll
+C:\apps\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\bin\Release\ZsmoplWssBuilder.pdb
+C:\apps\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\bin\Release\Gabos.Zsmolp.Client.dll
+C:\apps\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\bin\Release\ChilkatDotNet46.dll
+C:\apps\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\bin\Release\Gabos.Zsmolp.Client.pdb
+C:\apps\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\obj\Release\ZsmoplWssBuilder.csprojAssemblyReference.cache
+C:\apps\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\obj\Release\ZsmoplWssBuilder.csproj.CoreCompileInputs.cache
+C:\apps\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\obj\Release\ZsmoplWssBuilder.csproj.CopyComplete
+C:\apps\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\obj\Release\ZsmoplWssBuilder.dll
+C:\apps\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\obj\Release\ZsmoplWssBuilder.pdb
+C:\apps\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\bin\Release\RGiesecke.DllExport.Metadata.dll

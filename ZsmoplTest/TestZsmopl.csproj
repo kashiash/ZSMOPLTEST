@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ChilkatDotNet46">
-      <HintPath>..\..\..\..\..\..\..\Apps\kashiash\bin\32\ChilkatDotNet46.dll</HintPath>
+      <HintPath>..\Gabos.Zsmolp.Client\bin\Release\ChilkatDotNet46.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

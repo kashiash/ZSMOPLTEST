@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gabos.Zsmolp.Client", "Gabo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestZsmopl", "ZsmoplTest\TestZsmopl.csproj", "{798FE493-E9A1-4919-955C-7817DE1AF896}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gabos.Zsmopl.Clarion", "Gabos.Zsmopl.Clarion\Gabos.Zsmopl.Clarion.csproj", "{7EAB683C-257E-4133-B73A-29FDDD91F2C3}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{798FE493-E9A1-4919-955C-7817DE1AF896}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{798FE493-E9A1-4919-955C-7817DE1AF896}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{798FE493-E9A1-4919-955C-7817DE1AF896}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7EAB683C-257E-4133-B73A-29FDDD91F2C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7EAB683C-257E-4133-B73A-29FDDD91F2C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7EAB683C-257E-4133-B73A-29FDDD91F2C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7EAB683C-257E-4133-B73A-29FDDD91F2C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
