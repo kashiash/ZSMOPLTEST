@@ -14,10 +14,10 @@ namespace Gabos.Zsmolp.Client
             UnlockChilkat();
             return SignXml(certificate, password, body);
         }
-        public static string GetSignedRequestFullBody(string certificate, string password, string body)
+        public static string GetSignedRequestFullBody(string certificate, string password, string body, string bodyPrefix, string nameSpace)
         {
             UnlockChilkat();
-            return SignXmlFull(certificate, password, body);
+            return SignXmlFull(certificate, password, body, bodyPrefix, nameSpace);
         }
         private static void UnlockChilkat()
         {
@@ -131,6 +131,15 @@ namespace Gabos.Zsmolp.Client
             return sbXml.ToString();
         }
 
+        public static string GetSignedStatusRequest(string certificate, string certPassword, string iD)
+        {
+
+            string body = $"<stat:zapytajOStatusKomunikatu><komunikat><identyfikatorKomunikatu>{iD}</identyfikatorKomunikatu></komunikat></stat:zapytajOStatusKomunikatu>";
+            string bodyPrefix = "stat";
+            string nameSpace = @"http://csioz.gov.pl/zsmopl/ws/statuskomunikatudmz/";
+            return SignXmlFull(certificate, certPassword, body, bodyPrefix, nameSpace);
+        }
+
         private static bool VerifySignature(Chilkat.StringBuilder sbXml)
         {
             bool success;
@@ -166,13 +175,13 @@ namespace Gabos.Zsmolp.Client
 
 
         #region podpis pelnego body
-        public static string SignXmlFull(string certWss, string passWss, string body)
+        public static string SignXmlFull(string certWss, string passWss, string body, string bodyPrefix, string nameSpace)
         {
             bool success = true;
             // Create the above XML to be signed...
             Chilkat.Xml xmlToSign = new Chilkat.Xml();
             xmlToSign.Tag = "soapenv:Envelope";
-            xmlToSign.AddAttribute("xmlns:obs", "http://csioz.gov.pl/zsmopl/ws/obslugakomunikatow/");
+            xmlToSign.AddAttribute($"xmlns:{bodyPrefix}", $"{nameSpace}");
             xmlToSign.AddAttribute("xmlns:soapenv", "http://schemas.xmlsoap.org/soap/envelope/");
             xmlToSign.UpdateAttrAt("soapenv:Header|wsse:Security", true, "xmlns:wsse", "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd");
             xmlToSign.UpdateAttrAt("soapenv:Header|wsse:Security", true, "xmlns:wsu", "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd");
@@ -202,7 +211,7 @@ namespace Gabos.Zsmolp.Client
             gen.KeyInfoId = "KI-9D95C38916099AD2EE87DDAC1A76E97E4";
 
             // -------- Reference 1 --------
-            gen.AddSameDocRef("id-396BB6026342EB5C0E1EA73593B3CC098", "sha1", "EXCL_C14N", "obs", "");
+            gen.AddSameDocRef("id-396BB6026342EB5C0E1EA73593B3CC098", "sha1", "EXCL_C14N", bodyPrefix, "");
 
             // The reference to be produced in the Signature should look like this:
 
@@ -259,6 +268,7 @@ namespace Gabos.Zsmolp.Client
 
             // Save the signed XML to a file.
             //  success = sbXml.WriteFile(@"c:\apps\SignedRequest.xml", "utf-8", false);
+            success = sbXml.WriteFile($"c:\\apps\\zsmoplSignedXml{DateTime.Now.ToLongTimeString()}.xml", "utf-8", false);
 
             Debug.WriteLine(sbXml.GetAsString());
 

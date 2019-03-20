@@ -27,3 +27,4 @@ C:\apps\ZSMOPLTEST\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Debug\Gabos.Zsmolp.Client.
 C:\apps\ZSMOPLTEST\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Debug\Gabos.Zsmolp.Client.csproj.CopyComplete
 C:\apps\ZSMOPLTEST\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Debug\Gabos.Zsmolp.Client.dll
 C:\apps\ZSMOPLTEST\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Debug\Gabos.Zsmolp.Client.pdb
+C:\Users\jkosinski\Source\Repos\kashiash\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Debug\Gabos.Zsmolp.Client.csprojAssemblyReference.cache

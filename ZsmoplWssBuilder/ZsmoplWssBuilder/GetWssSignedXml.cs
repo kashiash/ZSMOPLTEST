@@ -21,10 +21,20 @@ namespace ZsmoplWssBuilder
         [return: MarshalAs(UnmanagedType.BStr)]
         public static string GetWssSignedXml([MarshalAs(UnmanagedType.BStr)] string certificate,
             [MarshalAs(UnmanagedType.BStr)] string certPassword,
-            [MarshalAs(UnmanagedType.BStr)] string bodyXml
-            )
+            [MarshalAs(UnmanagedType.BStr)] string bodyXml)
         {
             var Odp = ZsmoplFactory.GetSignedRequest(certificate, certPassword, bodyXml);
+
+            return Odp;
+        }
+
+        [DllExport(nameof(GetWssSignedXml), CallingConvention = CallingConvention.StdCall)]
+        [return: MarshalAs(UnmanagedType.BStr)]
+        public static string GetWssSignedStatusXml([MarshalAs(UnmanagedType.BStr)] string certificate,
+    [MarshalAs(UnmanagedType.BStr)] string certPassword,
+    [MarshalAs(UnmanagedType.BStr)] string ID)
+        {
+            var Odp = ZsmoplFactory.GetSignedStatusRequest(certificate, certPassword, ID);
 
             return Odp;
         }
@@ -33,10 +43,11 @@ namespace ZsmoplWssBuilder
         [return: MarshalAs(UnmanagedType.BStr)]
         public static string GetWssSignedFullXml([MarshalAs(UnmanagedType.BStr)] string certificate,
             [MarshalAs(UnmanagedType.BStr)] string certPassword,
-            [MarshalAs(UnmanagedType.BStr)] string bodyXml
-    )
+            [MarshalAs(UnmanagedType.BStr)] string bodyXml,
+            [MarshalAs(UnmanagedType.BStr)] string bodyPrefix,
+            [MarshalAs(UnmanagedType.BStr)] string bodyNameSpace)
         {
-            var Odp = ZsmoplFactory.GetSignedRequestFullBody(certificate, certPassword, bodyXml);
+            var Odp = ZsmoplFactory.GetSignedRequestFullBody(certificate, certPassword, bodyXml, bodyPrefix, bodyNameSpace);
 
             return Odp;
         }

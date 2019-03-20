@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gabos.Zsmolp.Client;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -46,40 +47,41 @@ namespace TestZsmopl
             var response = SendRequest(xmlRequest);
 
             Console.ReadLine();
+            var xBody = LoadMediqusXml();
+            var xmlRequest2 = ZsmoplFactory.SignXml(certWss, passWss, xBody);
+            var response2 = SendRequest(xmlRequest);
+            Console.ReadLine();
+
+            var xBody3 = LoadMediqusXmlFull();
+            string bodyPrefix = "obs";
+            string nameSpace = @"http://csioz.gov.pl/zsmopl/ws/obslugakomunikatow/";
+            var xmlRequest3 = ZsmoplFactory.SignXmlFull(certWss, passWss, xBody3, bodyPrefix, nameSpace);
+            var response3 = SendRequest(xmlRequest3);
+            Console.ReadLine();
+
+            var xBody4 = LoadMediqusXmlKomunikat();
+            bodyPrefix = "stat";
+            nameSpace = @"http://csioz.gov.pl/zsmopl/ws/statuskomunikatudmz/";
+            var xmlRequest4 = ZsmoplFactory.SignXmlFull(certWss, passWss, xBody4, bodyPrefix, nameSpace);
+            var response4 = SendRequest(xmlRequest4);
+            Console.ReadLine();
 
         }
 
-        public static string PrepareEnvelopeXml()
+        private static string LoadMediqusXmlFull()
         {
-            System.Text.StringBuilder sb = new System.Text.StringBuilder();
-            sb.AppendLine($"<soapenv:Envelope {Namespaces}>");
-            sb.AppendLine("   <soapenv:Header>");
-            sb.AppendLine(" <wsse:Security soapenv:mustUnderstand = \"1\"");
-            sb.AppendLine("                  xmlns:wsse=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\"");
-            sb.AppendLine("                  xmlns:wsu=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\">");
-            sb.AppendLine("   <wsse:BinarySecurityToken");
-            sb.AppendLine("                 EncodingType = \"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary\"");
-            sb.AppendLine("                 ValueType=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509PKIPathv1\"");
-            sb.AppendLine("                 wsu:Id=\"x509-3920507AC6762568DB1539944643191199\">BASE64_CERT</wsse:BinarySecurityToken>");
-            sb.AppendLine(" </wsse:Security>");
-
-            sb.AppendLine(" </soapenv:Header>");
-            sb.Append(PrepareBody());
-            sb.AppendLine("</soapenv:Envelope>");
-
-            return sb.ToString();
+            string rec = File.ReadAllText(@"c:\Apps\ww5065981.xml");
+            return $"<obs:zapiszKomunikatOS>{rec} </obs:zapiszKomunikatOS>";
         }
 
-        internal static string PrepareBody()
+        private static string LoadMediqusXmlKomunikat()
         {
-            System.Text.StringBuilder sb = new System.Text.StringBuilder();
-            sb.AppendLine($"<soapenv:Body xmlns:wsu=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\" wsu:Id=\"id-{bodyId}\">");
-            sb.AppendLine("   <obs:zapiszKomunikatOS>");
-            sb.AppendLine(LoadMediqusXml());
-            sb.AppendLine("   </obs:zapiszKomunikatOS>");
-            sb.AppendLine("</soapenv:Body>");
-            return sb.ToString();
+            return "<stat:zapytajOStatusKomunikatu><komunikat><identyfikatorKomunikatu>154686776898112672</identyfikatorKomunikatu></komunikat></stat:zapytajOStatusKomunikatu>";
         }
+
+
+
+
 
         private static string LoadMediqusXml()
         {
@@ -117,7 +119,7 @@ namespace TestZsmopl
             gen.SigNamespaceUri = "http://www.w3.org/2000/09/xmldsig#";
             gen.SignedInfoCanonAlg = "EXCL_C14N";
             gen.SignedInfoDigestMethod = "sha1";
-            
+
 
             // Set the KeyInfoId before adding references..
             gen.KeyInfoId = "KI-9D95C38916099AD2EE87DDAC1A76E97E4";
@@ -224,109 +226,6 @@ namespace TestZsmopl
             return success;
         }
 
-        public static Chilkat.StringBuilder SignXml(Chilkat.StringBuilder requestXml)
-
-        {
-            Chilkat.Http http = new Chilkat.Http();
-
-
-            if (success != true)
-            {
-                Debug.WriteLine(http.LastErrorText);
-                //throw new Exception(http.LastErrorText);
-            }
-
-
-            //  -------------------------------------------------------------------------
-            //  Step 2: Get the test certificate and private key stored in a .pfx
-            // 
-            Chilkat.BinData pfxData = new Chilkat.BinData();
-
-            pfxData.LoadFile(certWss);
-            if (success != true)
-            {
-                Debug.WriteLine(http.LastErrorText);
-                // throw new Exception(http.LastErrorText);
-            }
-
-            Chilkat.Pfx pfx = new Chilkat.Pfx();
-            string password = passWss;
-            success = pfx.LoadPfxEncoded(pfxData.GetEncoded("base64"), "base64", password);
-            if (success != true)
-            {
-                Debug.WriteLine(pfx.LastErrorText);
-                throw new Exception(http.LastErrorText);
-            }
-
-            //  -------------------------------------------------------------------------
-            //  Step 3: Get the certificate from the PFX.
-            // 
-            Chilkat.Cert cert = pfx.GetCert(0);
-            if (pfx.LastMethodSuccess != true)
-            {
-                Debug.WriteLine(pfx.LastErrorText);
-                //  throw new Exception(http.LastErrorText);
-            }
-
-            //  -------------------------------------------------------------------------
-            //  Step 4: Replace "BASE64_CERT" with the actual base64 encoded certificate.
-            // 
-            var enc = cert.GetEncoded(); // if I use base 64 from here there is an error in response - can't parse certificate date
-            var dec = "MIIFETCCBQ0wggL1oAMCAQICAgOTMA0GCSqGSIb3DQEBCwUAMIGTMQswCQYDVQQGEwJQTDEUMBIGA1UECAwLbWF6b3dpZWNraWUxETAPBgNVBAcMCFdhcnN6YXdhMQ4wDAYDVQQKDAVDU0lPWjENMAsGA1UECwwEV1JTVDERMA8GA1UEAwwIQ1NJT1ogQ0ExKTAnBgkqhkiG9w0BCQEWGnAuZ29sZWJpZXdza2lAY3Npb3ouZ292LnBsMB4XDTE3MTAyNTA5Mzk1MVoXDTE5MTExNDA5Mzk1MVowgaIxCzAJBgNVBAYTAlBMMRAwDgYDVQQIDAdTbGFza2llMREwDwYDVQQHDAhLYXRvd2ljZTE7MDkGA1UECgwyU3pwaXRhbCBaYWtvbnUgQm9uaWZyYXRyb3cgdyBLYXRvd2ljYWNoIHNwLiB6IG8uby4xMTAvBgNVBAMMKHVsLiBLcy4gTC4gTWFya2llZmtpIDg3LCA0MC0yMTEgS2F0b3dpY2UwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDAYnKptKAg5UD0l+TdllETLmFmdvPCnJEf2PiTTtt1c5k7UTgOCCKYeNIaSDUg4HMPqlmoBYD00B03WHjzD5Rev+NNmjdIEtuqbPin+JXp43Oe9NmrXaeBokE4n5OA5W4ctXeELeTSE4LYXr4N6OWnWO42XRlL2LrjqzGy+7CyrIiEP0UFt3EEvHpLcPY2phRvFvLrzHUPctKXA2wCTPm/REQmf5JcaBdpCoLJU8MMgT2PywFn1xxXhEWfbyBYsep8iAHW7yzKXtJfhPKEjNOU5v+G3vEzbyxX1FFYFuJ3NSZIsxp9GKDJ8As0u3QnlN/BS8aoCgAxiXsZHNMW3FCnAgMBAAGjWjBYMB0GA1UdDgQWBBRtLd4xo2eITXbAVs974mW6vnW4RDAfBgNVHSMEGDAWgBROzwzQpVHpGIt703+e7A34jpNG6zAJBgNVHRMEAjAAMAsGA1UdDwQEAwIFoDANBgkqhkiG9w0BAQsFAAOCAgEAWroFaNH/chJkFF73uwoOm3C+R47GF4Zt1ZAKZfnmtL7Fh7cOU2imippWhpRPy96Q9oExBKiWVqLgbEn/xsxkS7KwDWRpVtWHhqAdpqFAYM7VrIZh+Ei2ZjGul0cUK/adgzzSykDCcfDLxZJU3zMoVeZjQVdEgreayRKONMHLGMVsTJoWXwFhtWztsAUe9oDX9ItkPgMs3Z4Ba/DzcmmDeul5TQN4WC6YxFHnezit/2fk9h2mvNbWHkrY1a0HLQDKRiyH4gQhhO2gf0GSPcf/3fFQU/cPW1d+HALyc8lJ+QGI6KYL1xfxX8yu5gqd7leXnQf0AnPaKHSZVAZ0q737NuY35cqoasnLlz3YbBCBNtCcO8iOjFAtAp8mK2ONhiNHoto++jZGupzXkFuWXjy1Sp+vSH02o6Iuk6v23vKMB74XnxlDWNhvPW5xBowLqUuvx+hnd43dvFusvSQTrl5tgPJ6rQOe1nASWrzVDVaP5f/cUBd6CS9x+E0e7x61CVhrW23MQKLVin87Wy1Cjv1sxcCNDGH6RPAWoIJ7MmsaWJ4IjvGkBKmGltqLshw+qoYeZtpdZ0/c3R7JJYCG1O5T9HX1qvZXyiMIzxDcuVoEvH28SRNSgc2FxmVPmyvmsIp1LQu2D/+I0ML4s/X7GUYrKoytBFOKPU4FXi5ejQFLWYc=";
-
-            int numReplaced = requestXml.Replace("BASE64_CERT", dec);
-
-            //  -------------------------------------------------------------------------
-            //  Step 5: Build the wsse:SecurityTokenReference XML.
-            //  This will be the CustomKeyInfoXml (see below).
-            // 
-            Chilkat.Xml refXml = new Chilkat.Xml();
-            //   refXml.UpdateAttrAt("ds:KeyInfo", false, "Id", "KI-3920507AC6762568DB1539944643192200");
-            refXml.Tag = "wsse:SecurityTokenReference";
-
-            refXml.AddAttribute("wsse11:TokenType", "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509PKIPathv1");
-            refXml.AddAttribute("xmlns:wsse11", "http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd");
-            refXml.AddAttribute("wsu:Id", "STR-FF238E7C061332C5B19752C2FBC8CDEF2");
-
-            refXml.UpdateAttrAt("wsse:Reference", true, "URI", "#x509-3920507AC6762568DB1539944643191199");
-            refXml.UpdateAttrAt("wsse:Reference", true, "ValueType", "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509PKIPathv1");
-
-
-
-
-            refXml.EmitXmlDecl = false;
-            Debug.WriteLine(refXml.GetXml());
-
-            //  -------------------------------------------------------------------------
-            //  Step 6: Setup the XML Digital Signature Generator and add the XML Signature.
-            // 
-            Chilkat.XmlDSigGen gen = new Chilkat.XmlDSigGen();
-            gen.SigId = "SIG-3920507AC6762568DB1539944643201204";
-            gen.SigLocation = "soapenv:Envelope|soapenv:Header|wsse:Security";
-            gen.SignedInfoPrefixList = "obs soapenv";
-            gen.AddSameDocRef($"id-{bodyId}", "sha1", "C14N", "obs", "");
-
-            gen.KeyInfoType = "Custom";
-            refXml.EmitCompact = false;
-         
-            gen.CustomKeyInfoXml = refXml.GetXml();
-            gen.SetX509Cert(cert, true);
-            gen.SignedInfoDigestMethod = "sha1";
-            gen.SignedInfoCanonAlg = "EXCL_C14N";// "C14N_11"; //"http://www.w3.org/TR/2001/REC-xml-c14n-20010315";// 
-
-            success = gen.CreateXmlDSigSb(requestXml);
-            if (success != true)
-            {
-                Debug.WriteLine(gen.LastErrorText);
-                // throw new Exception(http.LastErrorText);
-            }
-
-            var xmlRequest = requestXml.GetAsString();
-            requestXml.WriteFile(@"c:\apps\SignedRequest.xml", "utf-8", false);
-            //  Examine the signed XML
-            Debug.WriteLine(requestXml.GetAsString());
-            return requestXml;
-        }
         public static string SendRequest(string xmlRequest)
         {
             Console.WriteLine("************************************************Request************************************************");
