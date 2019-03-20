@@ -13,3 +13,9 @@ C:\apps\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Release\Gabos.Zsmolp.Client.csproj.Co
 C:\apps\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Release\Gabos.Zsmolp.Client.csproj.CopyComplete
 C:\apps\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Release\Gabos.Zsmolp.Client.dll
 C:\apps\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Release\Gabos.Zsmolp.Client.pdb
+D:\jkosinski\ZSMOPLTEST\Gabos.Zsmolp.Client\bin\Release\Gabos.Zsmolp.Client.dll
+D:\jkosinski\ZSMOPLTEST\Gabos.Zsmolp.Client\bin\Release\Gabos.Zsmolp.Client.pdb
+D:\jkosinski\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Release\Gabos.Zsmolp.Client.csproj.CoreCompileInputs.cache
+D:\jkosinski\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Release\Gabos.Zsmolp.Client.csproj.CopyComplete
+D:\jkosinski\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Release\Gabos.Zsmolp.Client.dll
+D:\jkosinski\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Release\Gabos.Zsmolp.Client.pdb

@@ -16,3 +16,11 @@ C:\apps\ZSMOPLTEST\ZsmoplTest\obj\Release\TestZsmopl.csproj.CopyComplete
 C:\apps\ZSMOPLTEST\ZsmoplTest\obj\Release\TestZsmopl.exe
 C:\apps\ZSMOPLTEST\ZsmoplTest\obj\Release\TestZsmopl.pdb
 C:\apps\ZSMOPLTEST\ZsmoplTest\bin\Release\ChilkatDotNet46.dll
+D:\jkosinski\ZSMOPLTEST\ZsmoplTest\bin\Release\TestZsmopl.exe.config
+D:\jkosinski\ZSMOPLTEST\ZsmoplTest\bin\Release\TestZsmopl.exe
+D:\jkosinski\ZSMOPLTEST\ZsmoplTest\bin\Release\TestZsmopl.pdb
+D:\jkosinski\ZSMOPLTEST\ZsmoplTest\bin\Release\ChilkatDotNet46.dll
+D:\jkosinski\ZSMOPLTEST\ZsmoplTest\obj\Release\TestZsmopl.csproj.CoreCompileInputs.cache
+D:\jkosinski\ZSMOPLTEST\ZsmoplTest\obj\Release\TestZsmopl.csproj.CopyComplete
+D:\jkosinski\ZSMOPLTEST\ZsmoplTest\obj\Release\TestZsmopl.exe
+D:\jkosinski\ZSMOPLTEST\ZsmoplTest\obj\Release\TestZsmopl.pdb
