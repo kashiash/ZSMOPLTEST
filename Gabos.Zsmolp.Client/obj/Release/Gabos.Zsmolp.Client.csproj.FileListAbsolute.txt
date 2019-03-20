@@ -19,3 +19,4 @@ D:\jkosinski\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Release\Gabos.Zsmolp.Client.cspr
 D:\jkosinski\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Release\Gabos.Zsmolp.Client.csproj.CopyComplete
 D:\jkosinski\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Release\Gabos.Zsmolp.Client.dll
 D:\jkosinski\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Release\Gabos.Zsmolp.Client.pdb
+D:\jkosinski\ZSMOPLTEST\Gabos.Zsmolp.Client\obj\Release\Gabos.Zsmolp.Client.csprojAssemblyReference.cache
