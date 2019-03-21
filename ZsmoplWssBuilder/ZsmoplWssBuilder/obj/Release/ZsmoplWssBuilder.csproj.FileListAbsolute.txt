@@ -1,6 +1,5 @@
 C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\bin\Release\ZsmoplWssBuilder.dll
 C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\bin\Release\ZsmoplWssBuilder.pdb
-C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\bin\Release\RGiesecke.DllExport.Metadata.dll
 C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\bin\Release\Gabos.Zsmolp.Client.dll
 C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\bin\Release\ChilkatDotNet46.dll
 C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplWssBuilder\ZsmoplWssBuilder\bin\Release\Gabos.Zsmolp.Client.pdb

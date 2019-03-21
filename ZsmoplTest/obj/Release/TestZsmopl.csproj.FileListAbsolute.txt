@@ -24,3 +24,5 @@ D:\jkosinski\ZSMOPLTEST\ZsmoplTest\obj\Release\TestZsmopl.csproj.CoreCompileInpu
 D:\jkosinski\ZSMOPLTEST\ZsmoplTest\obj\Release\TestZsmopl.csproj.CopyComplete
 D:\jkosinski\ZSMOPLTEST\ZsmoplTest\obj\Release\TestZsmopl.exe
 D:\jkosinski\ZSMOPLTEST\ZsmoplTest\obj\Release\TestZsmopl.pdb
+C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplTest\bin\Release\Gabos.Zsmolp.Client.dll
+C:\Users\jkosinski\source\repos\kashiash\ZSMOPLTEST\ZsmoplTest\bin\Release\Gabos.Zsmolp.Client.pdb

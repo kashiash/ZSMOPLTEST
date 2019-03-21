@@ -15,7 +15,13 @@ namespace ZsmoplWssBuilder
 
             return Odp;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="certificate"></param>
+        /// <param name="certPassword"></param>
+        /// <param name="bodyXml"></param>
+        /// <returns></returns>
         [DllExport(nameof(GetWssSignedXml), CallingConvention = CallingConvention.StdCall)]
         [return: MarshalAs(UnmanagedType.BStr)]
         public static string GetWssSignedXml([MarshalAs(UnmanagedType.BStr)] string certificate,
@@ -25,8 +31,14 @@ namespace ZsmoplWssBuilder
 
             return Odp;
         }
-
-        [DllExport(nameof(GetWssSignedXml), CallingConvention = CallingConvention.StdCall)]
+        /// <summary>
+        /// GetWssSignedStatusXml(string certificate, string certPassword, string ID)
+        /// </summary>
+        /// <param name="certificate"></param>
+        /// <param name="certPassword"></param>
+        /// <param name="ID"></param>
+        /// <returns></returns>
+        [DllExport(nameof(GetWssSignedStatusXml), CallingConvention = CallingConvention.StdCall)]
         [return: MarshalAs(UnmanagedType.BStr)]
         public static string GetWssSignedStatusXml([MarshalAs(UnmanagedType.BStr)] string certificate,
             [MarshalAs(UnmanagedType.BStr)] string certPassword,
@@ -48,7 +60,7 @@ namespace ZsmoplWssBuilder
             return Odp;
         }
 
-        [DllExport(nameof(GetWssSignedXml), CallingConvention = CallingConvention.StdCall)]
+        [DllExport(nameof(WyslijKomunikatOS), CallingConvention = CallingConvention.StdCall)]
         [return: MarshalAs(UnmanagedType.BStr)]
         public static string WyslijKomunikatOS([MarshalAs(UnmanagedType.BStr)] string certificate,
             [MarshalAs(UnmanagedType.BStr)] string certPassword,
@@ -58,7 +70,7 @@ namespace ZsmoplWssBuilder
             return Odp;
         }
 
-        [DllExport(nameof(GetWssSignedXml), CallingConvention = CallingConvention.StdCall)]
+        [DllExport(nameof(ZapytajOStatusKomunikatu), CallingConvention = CallingConvention.StdCall)]
         [return: MarshalAs(UnmanagedType.BStr)]
         public static string ZapytajOStatusKomunikatu([MarshalAs(UnmanagedType.BStr)] string certificate,
             [MarshalAs(UnmanagedType.BStr)] string certPassword,
