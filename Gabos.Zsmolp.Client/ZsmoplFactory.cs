@@ -131,6 +131,29 @@ namespace Gabos.Zsmolp.Client
             return sbXml.ToString();
         }
 
+        public static string WyslijOS(string certWss, string passWss, string xBody)
+        {
+
+            //  var xmlRequest2 = ZsmoplFactory.SignXml(certWss, passWss, xBody);
+            string bodyPrefix = "obs";
+            string nameSpace = @"http://csioz.gov.pl/zsmopl/ws/obslugakomunikatow/";
+            var xmlRequest2 = ZsmoplFactory.SignXmlFull(certWss, passWss, xBody, bodyPrefix, nameSpace);
+
+            var response2 = ZsmoplFactory.SendRequest(certWss, passWss, xmlRequest2, "zapiszKomunikatOS", "/cxf/zsmopl/ws");
+            return response2;
+
+        }
+
+        public static string PobierzStatus(string certWss, string passWss, string id)
+        {
+
+            var xmlRequest2 = GetSignedStatusRequest(certWss, passWss, id);
+
+            var response2 = ZsmoplFactory.SendRequest(certWss, passWss, xmlRequest2, "zapytajOStatusKomunikatu", "/cxf/statuskomunikatudmz/");
+            return response2;
+
+        }
+
         public static string GetSignedStatusRequest(string certificate, string certPassword, string iD)
         {
 
@@ -277,5 +300,51 @@ namespace Gabos.Zsmolp.Client
             return sbXml.ToString();
         }
         #endregion
+
+        public static string SendRequest(string certWss, string passWss, string xmlRequest, string action, string path)
+        {
+            Console.WriteLine("************************************************Request************************************************");
+            Console.WriteLine(xmlRequest);
+            Chilkat.Http http = new Chilkat.Http();
+
+            //  Set the certificate to be used for mutual TLS authentication
+            //  (i.e. sets the client-side certificate for two-way TLS authentication)
+            var success = http.SetSslClientCertPfx(certWss, passWss);
+            if (success != true)
+            {
+                Console.WriteLine(http.LastErrorText);
+                return string.Empty;
+            }
+
+            Chilkat.HttpRequest req = new Chilkat.HttpRequest();
+            req.HttpVerb = "POST";
+            req.ContentType = "text/xml";
+            req.SendCharset = true;
+            req.Charset = "utf-8";
+            req.AddHeader("SOAPAction", $"\"{action}\"");
+            req.Path = path;
+
+
+            req.LoadBodyFromString(xmlRequest, "utf-8");
+
+
+
+            http.FollowRedirects = true;
+
+            //  Chilkat will automatically offer TLS 1.2.  It is the server that
+            //  chooses the TLS protocol version.  Assuming the server wishes to use
+            //  TLS 1.2, then that is what will be used.
+            Chilkat.HttpResponse response = http.SynchronousRequest("ewa-zsmopl.ezdrowie.gov.pl", 443, true, req);
+            if (http.LastMethodSuccess != true)
+            {
+                Console.WriteLine(http.LastErrorText);
+                return string.Empty;
+            }
+
+            string xmlResponse = response.BodyStr;
+            Console.WriteLine("************************************************Response************************************************");
+            Console.WriteLine(xmlResponse);
+            return xmlResponse;
+        }
     }
 }

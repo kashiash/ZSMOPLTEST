@@ -31,8 +31,8 @@ namespace ZsmoplWssBuilder
         [DllExport(nameof(GetWssSignedXml), CallingConvention = CallingConvention.StdCall)]
         [return: MarshalAs(UnmanagedType.BStr)]
         public static string GetWssSignedStatusXml([MarshalAs(UnmanagedType.BStr)] string certificate,
-    [MarshalAs(UnmanagedType.BStr)] string certPassword,
-    [MarshalAs(UnmanagedType.BStr)] string ID)
+            [MarshalAs(UnmanagedType.BStr)] string certPassword,
+            [MarshalAs(UnmanagedType.BStr)] string ID)
         {
             var Odp = ZsmoplFactory.GetSignedStatusRequest(certificate, certPassword, ID);
 
@@ -48,6 +48,28 @@ namespace ZsmoplWssBuilder
             [MarshalAs(UnmanagedType.BStr)] string bodyNameSpace)
         {
             var Odp = ZsmoplFactory.GetSignedRequestFullBody(certificate, certPassword, bodyXml, bodyPrefix, bodyNameSpace);
+
+            return Odp;
+        }
+
+        [DllExport(nameof(GetWssSignedXml), CallingConvention = CallingConvention.StdCall)]
+        [return: MarshalAs(UnmanagedType.BStr)]
+        public static string WyslijKomunikatOS([MarshalAs(UnmanagedType.BStr)] string certificate,
+            [MarshalAs(UnmanagedType.BStr)] string certPassword,
+            [MarshalAs(UnmanagedType.BStr)] string bodyXml)
+        {
+            var Odp = ZsmoplFactory.WyslijOS(certificate, certPassword, bodyXml);
+
+            return Odp;
+        }
+
+        [DllExport(nameof(GetWssSignedXml), CallingConvention = CallingConvention.StdCall)]
+        [return: MarshalAs(UnmanagedType.BStr)]
+        public static string ZapytajOStatusKomunikatu([MarshalAs(UnmanagedType.BStr)] string certificate,
+            [MarshalAs(UnmanagedType.BStr)] string certPassword,
+            [MarshalAs(UnmanagedType.BStr)] string idKomunikatu)
+        {
+            var Odp = ZsmoplFactory.PobierzStatus(certificate, certPassword, idKomunikatu);
 
             return Odp;
         }

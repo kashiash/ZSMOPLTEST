@@ -57,17 +57,23 @@ namespace TestZsmopl
             //var response3 = SendRequest(xmlRequest3);
             //Console.ReadLine();
 
-            var xBody4 = LoadMediqusXmlKomunikat();
-            var bodyPrefix = "stat";
-            var nameSpace = @"http://csioz.gov.pl/zsmopl/ws/statuskomunikatudmz/";
-            string ID = "155290997373964462";
-            var xmlRequest4 = ZsmoplFactory.GetSignedStatusRequest(certWss, passWss, ID);
-          //  var Odp = ZsmoplFactory.GetSignedStatusRequest(certificate, certPassword, ID);
-            string soapAction = "";
-            string path = "/cxf/statuskomunikatudmz/";
-            var response4 = SendRequest(xmlRequest4, soapAction,path);
-            Console.ReadLine();
+            //var xBody4 = LoadMediqusXmlKomunikat();
 
+            //string ID = "155290997373964462";
+            //var xmlRequest4 = ZsmoplFactory.GetSignedStatusRequest(certWss, passWss, ID);
+            ////  var Odp = ZsmoplFactory.GetSignedStatusRequest(certificate, certPassword, ID);
+            //string soapAction = "";
+            //string path = "/cxf/statuskomunikatudmz/";
+            //var response4 = SendRequest(xmlRequest4, soapAction, path);
+            //Console.ReadLine();
+
+
+            var response5 = ZsmoplFactory.WyslijOS(certWss, passWss, LoadMediqusXmlFull());
+                Console.ReadLine();
+
+            string ID = "155290997373964462";
+            var response6 = ZsmoplFactory.PobierzStatus(certWss, passWss, ID);
+            Console.ReadLine();
 
         }
 
@@ -270,7 +276,7 @@ namespace TestZsmopl
             Console.WriteLine(xmlResponse);
             return xmlResponse;
         }
-        public static string SendRequest(string xmlRequest,string action,string path)
+        public static string SendRequest(string xmlRequest, string action, string path)
         {
             Console.WriteLine("************************************************Request************************************************");
             Console.WriteLine(xmlRequest);
