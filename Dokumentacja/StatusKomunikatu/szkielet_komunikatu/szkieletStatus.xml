@@ -1,0 +1,10 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:stat="http://csioz.gov.pl/zsmopl/ws/statuskomunikatudmz/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <stat:zapytajOStatusKomunikatu>
+         <komunikat>
+            <identyfikatorKomunikatu>?</identyfikatorKomunikatu>
+         </komunikat>
+      </stat:zapytajOStatusKomunikatu>
+   </soapenv:Body>
+</soapenv:Envelope>

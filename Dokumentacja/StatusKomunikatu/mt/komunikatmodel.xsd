@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://csioz.gov.pl/zsmopl/schema/"
+	targetNamespace="http://csioz.gov.pl/zsmopl/schema/">
+	<xs:complexType name="Komunikat">
+		<xs:annotation>
+			<xs:documentation>Komunikat dla którego chcemy sprawdzić status.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="xs:long" name="identyfikatorKomunikatu"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element type="xs:string" name="certyfikat"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element type="xs:string" name="komunikat"
+				minOccurs="1" maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Status">
+		<xs:annotation>
+			<xs:documentation>Status komunikatu.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="xs:long" name="identyfikatorKomunikatu"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element type="xs:string" name="statusKomunikatu"
+				minOccurs="1" maxOccurs="1" />
+			<xs:element type="Blad" name="blad" minOccurs="0"
+				maxOccurs="unbounded" />
+			<xs:element type="Transakcja" name="transakcja" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Transakcja">
+		<xs:annotation>
+			<xs:documentation>Transakcja w komunikacie
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="xs:string" name="dataCzasTransakcji" minOccurs="1" maxOccurs="1" />
+			<xs:element type="xs:long" name="lp" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element type="Blad" name="blad" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Blad">
+		<xs:annotation>
+			<xs:documentation>Opis błędów dla komunikatu.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="xs:long" name="lpWTransakcji" minOccurs="0"
+				maxOccurs="1" />
+			<xs:element type="xs:string" name="kodBledu" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element type="xs:string" name="opisBledu" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element type="xs:string" name="wartoscBledna" minOccurs="0"
+				maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
+	

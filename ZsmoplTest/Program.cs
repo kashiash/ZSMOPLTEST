@@ -38,33 +38,36 @@ namespace TestZsmopl
             //var result = request.Append(PrepareEnvelopeXml());
             //var resultWss = SignXml(request);
 
-            var resultWss = SignXml();
-            //  Save the signed XMl to a file.
-            success = resultWss.WriteFile($"c:\\apps\\zsmoplSignedXml{DateTime.Now.ToLongTimeString()}.xml", "utf-8", false);
+            //var resultWss = SignXml();
+            //success = resultWss.WriteFile($"c:\\apps\\zsmoplSignedXml{DateTime.Now.ToLongTimeString()}.xml", "utf-8", false);
+            //var xmlRequest = resultWss.GetAsString();
+            //var response = SendRequest(xmlRequest);
+            //Console.ReadLine();
 
-            var xmlRequest = resultWss.GetAsString();
 
-            var response = SendRequest(xmlRequest);
+            //var xBody = LoadMediqusXml();
+            //var xmlRequest2 = ZsmoplFactory.SignXml(certWss, passWss, xBody);
+            //var response2 = SendRequest(xmlRequest2);
+            //Console.ReadLine();
 
-            Console.ReadLine();
-            var xBody = LoadMediqusXml();
-            var xmlRequest2 = ZsmoplFactory.SignXml(certWss, passWss, xBody);
-            var response2 = SendRequest(xmlRequest);
-            Console.ReadLine();
-
-            var xBody3 = LoadMediqusXmlFull();
-            string bodyPrefix = "obs";
-            string nameSpace = @"http://csioz.gov.pl/zsmopl/ws/obslugakomunikatow/";
-            var xmlRequest3 = ZsmoplFactory.SignXmlFull(certWss, passWss, xBody3, bodyPrefix, nameSpace);
-            var response3 = SendRequest(xmlRequest3);
-            Console.ReadLine();
+            //var xBody3 = LoadMediqusXmlFull();
+            //string bodyPrefix = "obs";
+            //string nameSpace = @"http://csioz.gov.pl/zsmopl/ws/obslugakomunikatow/";
+            //var xmlRequest3 = ZsmoplFactory.SignXmlFull(certWss, passWss, xBody3, bodyPrefix, nameSpace);
+            //var response3 = SendRequest(xmlRequest3);
+            //Console.ReadLine();
 
             var xBody4 = LoadMediqusXmlKomunikat();
-            bodyPrefix = "stat";
-            nameSpace = @"http://csioz.gov.pl/zsmopl/ws/statuskomunikatudmz/";
-            var xmlRequest4 = ZsmoplFactory.SignXmlFull(certWss, passWss, xBody4, bodyPrefix, nameSpace);
-            var response4 = SendRequest(xmlRequest4);
+            var bodyPrefix = "stat";
+            var nameSpace = @"http://csioz.gov.pl/zsmopl/ws/statuskomunikatudmz/";
+            string ID = "155290997373964462";
+            var xmlRequest4 = ZsmoplFactory.GetSignedStatusRequest(certWss, passWss, ID);
+          //  var Odp = ZsmoplFactory.GetSignedStatusRequest(certificate, certPassword, ID);
+            string soapAction = "";
+            string path = "/cxf/statuskomunikatudmz/";
+            var response4 = SendRequest(xmlRequest4, soapAction,path);
             Console.ReadLine();
+
 
         }
 
@@ -78,10 +81,6 @@ namespace TestZsmopl
         {
             return "<stat:zapytajOStatusKomunikatu><komunikat><identyfikatorKomunikatu>154686776898112672</identyfikatorKomunikatu></komunikat></stat:zapytajOStatusKomunikatu>";
         }
-
-
-
-
 
         private static string LoadMediqusXml()
         {
@@ -248,6 +247,51 @@ namespace TestZsmopl
             req.Charset = "utf-8";
             req.AddHeader("SOAPAction", $"\"zapiszKomunikatOS\"");
             req.Path = "/cxf/zsmopl/ws";
+
+
+            req.LoadBodyFromString(xmlRequest, "utf-8");
+
+
+
+            http.FollowRedirects = true;
+
+            //  Chilkat will automatically offer TLS 1.2.  It is the server that
+            //  chooses the TLS protocol version.  Assuming the server wishes to use
+            //  TLS 1.2, then that is what will be used.
+            Chilkat.HttpResponse response = http.SynchronousRequest("ewa-zsmopl.ezdrowie.gov.pl", 443, true, req);
+            if (http.LastMethodSuccess != true)
+            {
+                Console.WriteLine(http.LastErrorText);
+                return string.Empty;
+            }
+
+            string xmlResponse = response.BodyStr;
+            Console.WriteLine("************************************************Response************************************************");
+            Console.WriteLine(xmlResponse);
+            return xmlResponse;
+        }
+        public static string SendRequest(string xmlRequest,string action,string path)
+        {
+            Console.WriteLine("************************************************Request************************************************");
+            Console.WriteLine(xmlRequest);
+            Chilkat.Http http = new Chilkat.Http();
+
+            //  Set the certificate to be used for mutual TLS authentication
+            //  (i.e. sets the client-side certificate for two-way TLS authentication)
+            var success = http.SetSslClientCertPfx(certTLS, passTLS);
+            if (success != true)
+            {
+                Console.WriteLine(http.LastErrorText);
+                return string.Empty;
+            }
+
+            Chilkat.HttpRequest req = new Chilkat.HttpRequest();
+            req.HttpVerb = "POST";
+            req.ContentType = "text/xml";
+            req.SendCharset = true;
+            req.Charset = "utf-8";
+            req.AddHeader("SOAPAction", $"\"{action}\"");
+            req.Path = path;
 
 
             req.LoadBodyFromString(xmlRequest, "utf-8");

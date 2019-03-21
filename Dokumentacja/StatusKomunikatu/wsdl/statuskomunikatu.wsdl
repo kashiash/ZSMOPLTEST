@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://csioz.gov.pl/zsmopl/ws/" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:mt="http://csioz.gov.pl/zsmopl/schema/" xmlns:wsxs="http://csioz.gov.pl/zsmopl/ws/statuskomunikatu/"
+	xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	targetNamespace="http://csioz.gov.pl/zsmopl/ws/">
+
+	<wsdl:types>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:mt="http://csioz.gov.pl/zsmopl/schema/" targetNamespace="http://csioz.gov.pl/zsmopl/ws/statuskomunikatu/">
+			<xs:import namespace="http://csioz.gov.pl/zsmopl/schema/"
+				schemaLocation="../schema/komunikatmodel.xsd" />
+			<xs:element name="zapytajOStatusKomunikatu">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element type="mt:Komunikat" name="komunikat" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="statusOdpowiedz">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element type="mt:Status" name="statusKomunikatu" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+	</wsdl:types>
+
+	<wsdl:message name="zapytajOStatusKomunikatuInput">
+		<wsdl:part name="parameters" element="wsxs:zapytajOStatusKomunikatu" />
+	</wsdl:message>
+	<wsdl:message name="zapytajOStatusKomunikatuOutput">
+		<wsdl:part name="parameters" element="wsxs:statusOdpowiedz" />
+	</wsdl:message>
+
+
+	<wsdl:portType name="StatusKomunikatu">
+		<wsdl:operation name="zapytajOStatusKomunikatu">
+			<wsdl:input message="tns:zapytajOStatusKomunikatuInput"
+				name="zapytajOStatusKomunikatuInput"></wsdl:input>
+			<wsdl:output message="tns:zapytajOStatusKomunikatuOutput"
+				name="zapytajOStatusKomunikatuOutput"></wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="StatusKomunikatuBinding" type="tns:StatusKomunikatu">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http"
+			style="document" />
+		<wsdl:operation name="zapytajOStatusKomunikatu">
+			<soap:operation soapAction="zapytajOStatusKomunikatu"
+				style="document" />
+			<wsdl:input>
+				<soap:body parts="parameters" use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="parameters" use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="StatusKomunikatuService">
+		<wsdl:port name="StatusKomunikatu" binding="tns:StatusKomunikatuBinding">
+			<soap:address location="http://csioz.gov.pl/zsmopl/ws/" />
+		</wsdl:port>
+	</wsdl:service>
+
+</wsdl:definitions>
